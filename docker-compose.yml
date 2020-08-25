@@ -5,8 +5,7 @@ services:
             context: ./
             dockerfile: nginx.Dockerfile
         volumes:
-            - ./conf.d:/etc/nginx/conf.d
-            - /e/series e filmes:/var/www
+            - "${DIRECTORY_PATH}:/var/www"
         networks:
             - default
         ports:
